@@ -23,7 +23,9 @@
   .form_body
     = form_tag do
       .left_part
-        = select_tag 'appointment_type',options_for_select(["Appointment Type","second"]), :class => 'shadow'
+        .select_text_div.shadow
+          Appointment Type
+        = select_tag 'appointment_type',options_for_select(["Appointment Type","Second Option"]), :class => 'shadow'
         = text_field_tag 'name', 'Full name eg: Joe Joseph Doe', :class => 'shadow'
         = text_field_tag 'email', 'Email address', :class => 'shadow'
         = text_field_tag 'phone', 'Phone number', :class => 'shadow'

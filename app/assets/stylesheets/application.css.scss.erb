@@ -94,7 +94,7 @@ ul.nav li {
  }
 }
 .header_nav{
-  width:454px;
+  width:457px;
   float: right;
   margin-right: 220px;
   margin-top: 62px;
@@ -155,25 +155,53 @@ ul.nav li {
     }
   }
   float:left;
-  width:776px;
+  width:777px;
   margin-left: 344px;
   margin-top: 40px;
-   textarea,select,input{
+  textarea,select,input{
     background:white;
-    padding: 6px;
-    border:1px solid #059644;
+    padding: 7px;
+    border-style: solid;
+    border-color:#059644;
+    border-width:1px 0px 0px 1px;
     border-radius:4px;
     color: #6faca7;
     margin-bottom:22px;
+    outline:1px solid #888888;
   }
+  .select_text_div{
+    position:absolute;
+    outline:1px solid #888888;
+    padding-left:7px;
+    padding-top:7px;
+    z-index:0;
+    top:182px;
+    font-size:9pt;
+    background: url(<%= asset_path "dropdown_arrow.png"%>) no-repeat right white;
+    border:1px transparent;
+    border-radius:6px;
+    height:21px;
+    margin-bottom:25px;
+    width:367px;
+    color: #6faca7;
+  }
+  .btnimage{
+    position: absolute;
+    left: 686px;
+  }
+
   select{
     width: 373px;
+    position: relative;
+    opacity:0;
+    z-index:1;
   }
   input{
     display:block;
     width:359px;
   }
   .submit_app{
+    cursor: pointer;
     background: url(<%= asset_path "submit_app_button.png" %>) no-repeat;
     width:240px;
     margin: -16px 0 0 69px;
@@ -248,8 +276,8 @@ ul.nav li {
   background: url('footer_bg.png') no-repeat;
   height:284px;
   clear: both;
-  padding-top: 81px;
-  padding-left: 117px;
+  padding-top: 76px;
+  padding-left: 111px;
   font-size:9pt;
   position: relative;
   top:121px;
@@ -264,12 +292,11 @@ ul.nav li {
   }
 
   .contacts {
-    margin-left:354px;
-    margin-top: -5px;
+    margin-left:362px;
     float:left;
     p{
       clear:both;
-      margin: 8px 0;
+      margin: 8px 3px;
     }
     ul{
       li{
@@ -282,18 +309,18 @@ ul.nav li {
 
   .copyright{
     clear:both;
-    margin-left:380px;
+    margin-left:282px;
     margin-left: 276px;
-    padding-top: 35px;
+    padding-top: 43px;
   }
 
   ul{
     li{
       list-style-type: disc;
       a{
-      text-decoration: none;
-      color:#999999;
-      text-shadow:0px 0px #999999;
+        text-decoration: none;
+        color:#999999;
+        text-shadow:0px 0px #999999;
       }
       margin:10px 0;
     }
@@ -314,7 +341,7 @@ h3,h4{
 
 h1,h2,h3{
   text-align:center;
-    color: white;
+  color: white;
 }
 .distribute{
   text-align:justify;
@@ -345,8 +372,8 @@ ul.hornav{
   }
 }
 .shadow {
-   -moz-box-shadow:    inset 0 4px 5px lightgray;
-   -webkit-box-shadow: inset 0 4px 5px black;
-   box-shadow:         inset 0 4px 5px lightgray;
+  -moz-box-shadow:    inset 0 4px 5px lightgray;
+  -webkit-box-shadow: inset 0 4px 5px black;
+  box-shadow:         inset 0 4px 5px lightgray;
 }
 /*----------style setups----------*/
