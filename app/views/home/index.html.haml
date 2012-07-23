@@ -1,1 +1,70 @@
-%h3 Home
+.header_band
+  .navigation_top.distribute
+    %ul.hornav
+      - navs=['+777 667 8890','Help', 'Contact Us', 'Register', 'Login']
+      - navs.each do |link|
+        %li=link_to link,"##{link}"
+.header_nav.distribute
+  %ul.hornav
+    - navs=['ALL ABOUT US', 'YOUR HEALTH HISTORY','PRICING','LAW&INFO']
+    - navs.each do |link|
+      %li=link_to link,"##{link}"
+.logo
+  = image_tag asset_path("header_logo.png")
+.green
+  .verification_sign
+    = image_tag asset_path("verification_sign.png")
+  %h1 Make an appointment & get your medical marijuana recommendation
+  %h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam accumsan nulla, vitae lacinia lacus fringilla!
+  .form_label
+    = image_tag asset_path("fill_in_following.png")
+    .form_context
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam accumsa nulla, vitae lacinia lacus fringilla et morbi sit amet. 
+  .form_body
+    = form_tag do
+      .left_part
+        = select_tag 'appointment_type',options_for_select(["Appointment Type","second"]), :class => 'shadow'
+        = text_field_tag 'name', 'Full name eg: Joe Joseph Doe', :class => 'shadow'
+        = text_field_tag 'email', 'Email address', :class => 'shadow'
+        = text_field_tag 'phone', 'Phone number', :class => 'shadow'
+      .right_part
+        .user_text
+          = text_area_tag 'user_text','Tell us some more...What day and hour is good for you?' ,:class => 'shadow',:rows => '7'
+        = submit_tag '', :class => 'submit_app'
+.maincontent
+  .left_column
+    %h1 Welcome to Higginsmd420
+    %h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam accumsan nulla, vitae lacinia lacus fringilla et morbi sit amet odio vel metus mollis mollis ut non lacus!
+    .text_content
+      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam accumsan nulla, vitae lacinia lacus fringilla et. Morbi sit amet odio vel metus mollis mollis ut non lacus. Donec pellentesque erat vel tortor sollicitudin eget molestie turpis sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+
+      %p Nunc ac felis odio. Praesent lacinia fermentum lacus at porttitor. Sed gravida tortor in urna consequat non fermentum odio vestibulum. Sed non metus sem, et viverra dui. Vestibulum vel dictum orci. Praesent velit arcu, ultricies at molestie id, sodales mattis sapien.
+      .part2
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam accumsan nulla, vitae lacinia lacus fringilla et. Morbi sit amet odio vel metus mollis mollis ut non lacus. Donec pellentesque erat vel tortor sollicitudin eget molestie turpis sagittis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        %p Nunc ac felis odio. Praesent lacinia fermentum lacus at porttitor. Sed gravida tortor in urna consequat non fermentum odio vestibulum. Sed non metus sem, et viverra dui. Vestibulum vel dictum orci. Praesent velit arcu, ultricies at molestie id, sodales mattis sapien.
+        %p Nunc ac felis odio. Praesent lacinia fermentum lacus at porttitor. Sed gravida tortor in urna consequat non fermentum odio vestibulum. Sed non metus sem, et viverra dui. Vestibulum vel dictum orci. Praesent velit arcu, ultricies at molestie id, sodales mattis sapien.
+  .right_column
+    .videobox
+      = image_tag asset_path("right_column_vid.png")
+    .map
+      = image_tag asset_path("right_column_map.png")
+#footer
+  %ul.firstlist
+    - ['All About Us','Your Health History','Pricing','Law&Info','Verifications'].each do |lelem|
+      %li= link_to lelem,"##{lelem}"
+  %ul.secondlist
+    - ['Help','Contact Us','Login','Privacy Policy','Terms'].each do |lelem|
+      %li= link_to lelem,"##{lelem}"
+  .contacts
+    %ul
+      %li= link_to image_tag(asset_path "twitter_icon.png"), "#twitter"
+      %li= link_to image_tag(asset_path "skype_icon.png"), "#skype"
+      %li= link_to image_tag(asset_path "fb_icon.png"), "#fb"
+    %p Phone: 22 52 63 33
+    %p
+      Email:
+      = link_to "info@higginsmd420","mailto:info@higginsmd420"
+  .copyright
+    Copyright © 2012 Higginsmd420. Made by Pelesend - www.pelesend.com
+
+

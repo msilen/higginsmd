@@ -1,0 +1,352 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require reset
+ *= require_self
+ *= require_tree .
+ */
+.brand {
+  float: left;
+  padding-right: 8px;
+}
+ul.nav {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+ul.nav li {
+  display: inline;
+}
+#flash_notice, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+#flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+/*----------font face----------*/
+@font-face{
+  font-family: MPCB;
+  <%#src: url('/fonts/MyriadPro-BoldCond.otf');%>
+  src: url('/fonts/MyriadPro-BoldCond.woff?');
+  <%#url('/fonts/MyriadPro-BoldCond.eot?') format('eot')%>
+}
+@font-face{
+  font-family: MPCI;
+  src: url('/fonts/MyriadPro-CondIt.otf');
+}
+@font-face{
+  font-family: HN;
+  src: url('/fonts/helveticaneueltstd-mdcn-webfont.ttf');
+}
+
+/*----------font face----------*/
+/*----------style container ----------*/
+.container{
+  margin:0 auto;
+  width:1204px;
+}
+#main{
+  position:relative;
+}
+/*----------style container ----------*/
+
+/*----------style header part----------*/
+.navigation_top{
+  float:right;
+   width: 381px;
+   margin-right:63px;
+}
+
+.logo{
+  position: absolute;
+  top:0;
+  left: 64px;
+}
+.header_band {
+  background: url('header_top_bg.png');
+  width:100%;
+  height: 23px;
+  overflow: hidden;
+ ul{
+   margin-right: 52px;
+   li{
+     a{
+       text-decoration: none;
+       font-size:10pt;
+       font-family: Arial;
+       color: white;
+       text-shadow: 2px 2px #80CBC6;
+     }
+   }
+ }
+}
+.header_nav{
+  width:454px;
+  float: right;
+  margin-right: 220px;
+  margin-top: 62px;
+  ul{
+    width:100%;
+    li{
+      padding:10px 15px;
+      &:hover{
+        border-radius:5px;
+        background-image: -moz-linear-gradient(top, lightgray, white);
+        background-image: -webkit-linear-gradient(top, lightgray, white);
+        background-image: -o-linear-gradient(top, lightgray, white);
+      }
+       a{
+        text-decoration:none;
+        color:black;
+        font-family: MPCI;
+        font-size:14pt;
+      }
+    }
+  }
+}
+.green{
+  clear:both;
+  background-image: url('header_greenbg.png');
+  height: 365px;
+  position: relative;
+  top: 2px;
+  padding-top: 62px;
+  .verification_sign{
+    left: 1020px;
+    position: absolute;
+    top: -47px;
+  }
+  h1{
+    text-shadow: 2px 4px #01621d;
+    line-height: 30px;
+    font-size:44px;
+    margin-bottom:0px;
+  }
+  h3{
+    font-size:23px;
+    margin-top:25px;
+  }
+}
+.form_body{
+  .left_part {
+    float: left;
+    width: 373px;
+  }
+  .right_part{
+    margin-left:29px;
+    float:left;
+  }
+  .user_text{
+    textarea{
+      width:360px;
+    }
+  }
+  float:left;
+  width:776px;
+  margin-left: 344px;
+  margin-top: 40px;
+   textarea,select,input{
+    background:white;
+    padding: 6px;
+    border:1px solid #059644;
+    border-radius:4px;
+    color: #6faca7;
+    margin-bottom:22px;
+  }
+  select{
+    width: 373px;
+  }
+  input{
+    display:block;
+    width:359px;
+  }
+  .submit_app{
+    background: url(<%= asset_path "submit_app_button.png" %>) no-repeat;
+    width:240px;
+    margin: -16px 0 0 69px;
+    height:51px;
+    border:0;
+  }
+}
+.form_label{
+  left: 79px;
+  position: absolute;
+  top: 181px;
+}
+.form_context{ 
+  font-family: MPCI;
+  font-size:16px;
+  margin-top:-17px;
+  line-height:20px;
+  width:147px;
+  color:white;
+  text-shadow: 0px 0px #80CBC6;
+}
+/*----------style header part----------*/
+/*----------style center part----------*/
+.maincontent{
+  h1{
+    color: #0a9449;
+    font-size: 50px;
+  }
+}
+.left_column{
+  width: 475px;
+  float:left;
+  padding-left: 80px;
+  padding-right:41px ;
+  p{
+    margin-top: 13px;
+  }
+  h1{
+    text-align: left;
+    margin-top: 63px;
+  }
+  h4{
+    margin-top: 17px;
+  }
+}
+.text_content {
+  font-family: Verdana;
+  font-size: 9pt;
+  line-height:150%;
+  margin-top: 15px;
+  .part2{
+    margin-top:135px;
+  }
+}
+.right_column{
+  float:left;
+  .videobox{
+    img{
+      margin-top:70px;
+    }
+  }
+  .map{
+    img{
+      margin-top:55px;
+      margin-left:2px;
+    }
+  }
+}
+/*----------style center part----------*/
+/*----------style footer part----------*/
+#footer{
+  background: url('footer_bg.png') no-repeat;
+  height:284px;
+  clear: both;
+  padding-top: 81px;
+  padding-left: 117px;
+  font-size:9pt;
+  position: relative;
+  top:121px;
+  color:#999999;
+  a{
+    color:#999999;
+  }
+
+  .firstlist,.secondlist{
+    float:left;
+    margin-right:131px;
+  }
+
+  .contacts {
+    margin-left:354px;
+    margin-top: -5px;
+    float:left;
+    p{
+      clear:both;
+      margin: 8px 0;
+    }
+    ul{
+      li{
+        list-style-type:none;
+        margin-right:13px;
+        float:left;
+      }
+    }
+  }
+
+  .copyright{
+    clear:both;
+    margin-left:380px;
+    margin-left: 276px;
+    padding-top: 35px;
+  }
+
+  ul{
+    li{
+      list-style-type: disc;
+      a{
+      text-decoration: none;
+      color:#999999;
+      text-shadow:0px 0px #999999;
+      }
+      margin:10px 0;
+    }
+  }
+}
+/*----------style footer part----------*/
+/*----------style setups----------*/
+body{
+  font-family:Verdana;
+}
+h1,h2{
+  font-family: MPCB;
+  font-weight: normal;
+}
+h3,h4{
+  font-family: MPCI;
+}
+
+h1,h2,h3{
+  text-align:center;
+    color: white;
+}
+.distribute{
+  text-align:justify;
+  &:after{
+    content: "";
+    display: inline-block;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+.clearfix:after { 
+  content: "."; 
+  visibility: hidden; 
+  display: block; 
+  height: 0; 
+  clear: both;
+}
+ul.hornav{
+  list-style-type: none;
+  margin:0 auto;
+  padding: 0px;
+  overflow: hidden;
+  display:inline;
+  li{
+    margin: auto;
+    display: inline-block;
+  }
+}
+.shadow {
+   -moz-box-shadow:    inset 0 4px 5px lightgray;
+   -webkit-box-shadow: inset 0 4px 5px black;
+   box-shadow:         inset 0 4px 5px lightgray;
+}
+/*----------style setups----------*/

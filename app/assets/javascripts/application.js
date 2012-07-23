@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require cufon-yui
 //= require_tree .
+//Cufon.replace("h1", {textShadow:'#01621d 2px 4px'})
+
