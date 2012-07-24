@@ -1,0 +1,18 @@
+#footer
+  %ul.firstlist
+    - ['All About Us','Your Health History','Pricing','Law&Info','Verifications'].each do |lelem|
+      %li= link_to lelem,"##{lelem}"
+  %ul.secondlist
+    - ['Help','Contact Us','Login','Privacy Policy','Terms'].each do |lelem|
+      %li= link_to lelem,"##{lelem}"
+  .contacts
+    %ul
+      %li= link_to image_tag(asset_path "twitter_icon.png"), "#twitter"
+      %li= link_to image_tag(asset_path "skype_icon.png"), "#skype"
+      %li= link_to image_tag(asset_path "fb_icon.png"), "#fb"
+    %p Phone: 22 52 63 33
+    %p
+      Email:
+      = link_to "info@higginsmd420","mailto:info@higginsmd420"
+  .copyright
+    Copyright © 2012 Higginsmd420. Made by Pelesend - www.pelesend.com
