@@ -38,26 +38,37 @@ ul.nav li {
 }
 /*----------font face----------*/
 @font-face{
+  font-family: Journal;
+  src: url('/fonts/journal.ttf')
+}
+@font-face{
   font-family: MPCB;
   src: url('/fonts/MyriadPro-BoldCond.eot?#iefix') format('embedded-opentype'),
   url('fonts/MyriadPro-BoldCond.woff') format('woff'),
   url('/fonts/MyriadPro-BoldCond.otf') format('opentype');
+  font-weight:bold;
 }
 @font-face{
   font-family: MPCI;
   src: url('/fonts/myriadpro-condit-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/MyriadPro-CondIt.otf') format('opentype');
-
+  font-weight:normal;
 }
 @font-face{
   font-family: MPCBI;
   src: url('/fonts/myriadpro-condit-webfont.eot?#iefix') format('embedded-opentype'),
   url('/fonts/MyriadPro-BoldCondIt.otf') format('opentype');
+  font-weight:bold;
+  font-style: italic;
 }
 
 @font-face{
   font-family: HN;
   src: url('/fonts/helveticaneueltstd-mdcn-webfont.ttf');
+}
+@font-face{
+  font-family: HNM;
+  src: url('/fonts/HelveticaNeueMedium.ttf');
 }
 
 @font-face{
@@ -358,10 +369,11 @@ h1,h2{
 h3,h4{
   font-family: MPCI;
 }
-
-h1,h2,h3{
-  text-align:center;
-  color: white;
+header{
+  h1,h2,h3{
+    text-align:center;
+    color: white;
+  }
 }
 .distribute{
   text-align:justify;
@@ -399,5 +411,11 @@ ul.hornav{
 b{
   font-weight:bold;
 }
+.tacenter{
+  text-align: center;
+}
+
+/*----------center part setups----------*/
+/*----------center part setups----------*/
 /*----------style setups----------*/
 
