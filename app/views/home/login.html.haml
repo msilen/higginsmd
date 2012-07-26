@@ -1,0 +1,39 @@
+#login
+  .header
+    .logo
+      = link_to (image_tag asset_path("header_logo.png")), root_path
+  .green
+    .left_column
+      %h1 Login to Your Account
+      %h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      .form_body
+        = form_tag do
+          = label_tag :email, "Email"
+          = text_field_tag :email
+          = link_to "I Forgot","#recover"
+          = label_tag :email, "Password"
+          = text_field_tag :password
+          = link_to "I Forgot","#recover"
+      .loginbtn
+        %h4.fl Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam accumsa nulla, vitae lacinia lacus .
+        = link_to image_tag("login_btn.png"), "#login"
+      = image_tag "login_here.png"
+  .register_form
+    %h1 Start using your Free Account
+    %h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    .form_body
+      = form_tag do
+        = label_tag :first_name, "First Name"
+        = text_field_tag :first_name
+        = label_tag :last_name, "Last Name"
+        = text_field_tag :last_name
+        = label_tag :phone, "Phone"
+        = text_field_tag :phone
+        = label_tag :email, "Email"
+        = text_field_tag :email
+        = label_tag :email, "Password"
+        = text_field_tag :password
+    %h4 Lorem ipsum dolor sit amet, consectetur elit. Praesent aliquam accumsa.
+    = link_to image_tag("register_now_btn.png"),{},{:class => "register_now_btn"}
+
+

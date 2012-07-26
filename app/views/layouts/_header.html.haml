@@ -3,7 +3,7 @@
     %ul.hornav
       - navs=['+777 667 8890','Help', 'Contact Us', 'Register', 'Login']
       - navs.each do |link|
-        %li=link_to link,"##{link}"
+        %li=link_to link,"/home/#{link.downcase}"
 .header_nav.distribute
   %ul.hornav
     - navs=[['ALL ABOUT US','all_about_us'], ['YOUR HEALTH HISTORY','your_health_history'],[ 'PRICING','pricing'],['LAW&INFO','law_info']]
