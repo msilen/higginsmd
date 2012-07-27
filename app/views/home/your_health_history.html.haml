@@ -1,0 +1,48 @@
+= content_for :green do
+  .green.yhh
+    .verification_sign
+      = link_to image_tag(asset_path("verification_sign.png")),"/home/verification"
+    %h1 Stephanie Higgins MD
+    %h3 Patient Intake Form
+    %h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit pulvinar elementum. Phasellus at mi ac eros mollis porttitor eu id dolor. Nulla nec enim elit, a sodales leo. Mauris porttitor orci eu ligula tristique eu varius nisi rutrum. Ut quis quam ac magna mollis vestibulum. 
+.yhhform
+  %h1 Step1. Personal Information
+  = form_tag do
+    .left_column
+      .photo
+        = image_tag "yhhphoto.png"
+      %h4 Lorem Ipsum is simply dummy text of the printing an typesetting industry. Lorem Ipsum ha s been the indutandard dummy text ever since the 1500s.
+      = file_field_tag "upload_photo"
+      = link_to "Upload Photo","#",:class => "upload_button"
+      = label_tag :how_did_you_find, "How did you find about us?"
+      = text_area_tag :how_did_you_find, nil,:rows =>5
+      .arrow
+        Lorem Ipsum is simply dummy text of the printing an
+        typesetting industry, Lorem Ipsum has 
+    .center_column
+      = label_tag :last_name, "Last Name"
+      = text_field_tag :last_name
+      = label_tag :first_name, "First Name"
+      = text_field_tag :first_name
+      = label_tag :middle_name, "Middle name or middle initial"
+      = text_field_tag :middle_name
+      = label_tag :email, "Email address"
+      = text_field_tag :email
+      = label_tag :address, "Address"
+      = text_field_tag :address
+      = label_tag :state, "State"
+      = select_tag :state, options_for_select(["select from list"])
+      .dob
+        = label_tag :dob, "DOB"
+        = select_tag :dob, options_for_select(["month"])
+        = select_tag :dob, options_for_select(["day"])
+        = select_tag :dob, options_for_select(["year"]),:class => "year"
+      .sex
+        = label_tag :sex, "Sex", :class => "header_label"
+        = label_tag :sex_male, "Male", :class => 'male'
+        = radio_button_tag :sex, "male"
+        = label_tag :sex_female, "Female", :class =>'female'
+        = radio_button_tag :sex, "female"
+        .marital
+          = label_tag :marital_status, "Marital Status"
+          = select_tag :marital_status, options_for_select(["Select from list"])

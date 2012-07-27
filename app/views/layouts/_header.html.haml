@@ -11,25 +11,28 @@
       %li=link_to link[0],"/home/#{link[1]}"
 .logo
   = link_to (image_tag asset_path("header_logo.png")), root_path
-.green
-  .verification_sign
-    = image_tag asset_path("verification_sign.png")
-  %h1 Make an appointment & get your medical marijuana recommendation
-  %h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam accumsan nulla, vitae lacinia lacus fringilla!
-  .form_label
-    = image_tag asset_path("fill_in_following.png")
-    .form_context
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam accumsa nulla, vitae lacinia lacus fringilla et morbi sit amet. 
-  .form_body
-    = form_tag do
-      .left_part
-        .select_text_div.shadow
-          Appointment Type
-        = select_tag 'appointment_type',options_for_select(["Appointment Type","Second Option"]), :class => 'shadow'
-        = text_field_tag 'name', 'Full name eg: Joe Joseph Doe', :class => 'shadow'
-        = text_field_tag 'email', 'Email address', :class => 'shadow'
-        = text_field_tag 'phone', 'Phone number', :class => 'shadow'
-      .right_part
-        .user_text
-          = text_area_tag 'user_text','Tell us some more...What day and hour is good for you?' ,:class => 'shadow',:rows => '7'
-        = submit_tag '', :class => 'submit_app'
+- unless content_for?(:green)
+  .green
+    .verification_sign
+      = link_to image_tag(asset_path("verification_sign.png")),"/home/verification"
+    %h1 Make an appointment & get your medical marijuana recommendation
+    %h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam accumsan nulla, vitae lacinia lacus fringilla!
+    .form_label
+      = image_tag asset_path("fill_in_following.png")
+      .form_context
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquam accumsa nulla, vitae lacinia lacus fringilla et morbi sit amet. 
+    .form_body
+      = form_tag do
+        .left_part
+          .select_text_div.shadow
+            Appointment Type
+          = select_tag 'appointment_type',options_for_select(["Appointment Type","Second Option"]), :class => 'shadow'
+          = text_field_tag 'name', 'Full name eg: Joe Joseph Doe', :class => 'shadow'
+          = text_field_tag 'email', 'Email address', :class => 'shadow'
+          = text_field_tag 'phone', 'Phone number', :class => 'shadow'
+        .right_part
+          .user_text
+            = text_area_tag 'user_text','Tell us some more...What day and hour is good for you?' ,:class => 'shadow',:rows => '7'
+          = submit_tag '', :class => 'submit_app'
+- else
+  = yield :green

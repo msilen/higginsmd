@@ -17,5 +17,17 @@
 #Cufon.replace("h1", {textShadow:'#01621d 2px 4px'})
 
 $ ->
+  $("a.upload_button").click ->
+    $("#upload_photo").click()
   $(".form_body select").click ->
     $(".select_text_div").html($(".left_part option:selected").val())
+  $("label.male").click ->
+    $("label.female").removeClass('checked')
+    $(@).addClass('checked')
+    radioid=$(@).attr('for')
+    $("#"+radioid).attr('checked',true)
+  $("label.female").click ->
+    $("label.male").removeClass('checked')
+    $(@).addClass('checked')
+    radioid=$(@).attr('for')
+    $("#"+radioid).attr('checked',true)

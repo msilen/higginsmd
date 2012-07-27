@@ -1,0 +1,15 @@
+= content_for :stylesheets do
+  :plain
+    .green{ display:none; }
+    .header_nav{
+    position: relative;
+      z-index:1
+    }
+.verification
+  = form_tag do
+    = text_field_tag "IDNumber", nil, {:placeholder => "ID Number"}
+.ver_text
+  %h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  %p Sed varius, turpis eu pulvinar condimentum, mauris orci tincidunt justo, ac venenatis nisi dui ultrices orci. Praesent sagittis justo id felis dictum condimentum. Curabitur aliquet blandit ante faucibus tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur faucibus risus vel odio posuere commodo. Nunc in quam vitae arcu scelerisque egestas et et metus. Ut dolor enim, gravida ac faucibus in, tempor in ipsum. In tempor, mi nec mollis euismod, ligula lorem dignissim nisl, quis lobortis sapien neque at lectus. Vestibulum porta mauris nec ante aliquam tincidunt vel vel nulla. Duis sagittis sodales ligula ut adipiscing. Donec pulvinar nisi nec est fermentum non egestas sem molestie. 
+= content_for :green do
+  %h1 TEST
