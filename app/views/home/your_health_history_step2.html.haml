@@ -1,0 +1,18 @@
+= content_for :green do
+  .green.yhh
+    .verification_sign
+      = link_to image_tag(asset_path("verification_sign.png")),"/home/verification"
+    %h1 Stephanie Higgins MD
+    %h3 Patient Intake Form
+    %h4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis blandit pulvinar elementum. Phasellus at mi ac eros mollis porttitor eu id dolor. Nulla nec enim elit, a sodales leo. Mauris porttitor orci eu ligula tristique eu varius nisi rutrum. Ut quis quam ac magna mollis vestibulum. 
+.yhhform.step2
+  %h1 Step2.Health History
+  %h2 What is/are the main medical problem(s) for which you seek a medical marijuana evaluation?  
+  = form_tag do
+    .medical_problem
+      = label_tag :medical_problem, "Medical Problem"
+      = text_field_tag :medical_problem, nil, :placeholder => "Medical Problem"
+    .medical_problem_date
+      = label_tag :approximate_date, "Approximate Date"
+      = text_field_tag :approximate_date, nil, :placeholder => "_ _ / _ _ / _ _ _ _"
+    = button_tag "Add Problem"

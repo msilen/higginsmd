@@ -21,6 +21,9 @@ $ ->
     $("#upload_photo").click()
   $(".form_body select").click ->
     $(".select_text_div").html($(".left_part option:selected").val())
+  $(".button_for_select select").click ->
+    option_text=$(this).children("option:selected").val()
+    $(this).next("span").children("span").html(option_text)
   $("label.male").click ->
     $("label.female").removeClass('checked')
     $(@).addClass('checked')

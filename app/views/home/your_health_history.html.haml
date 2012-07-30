@@ -31,12 +31,24 @@
       = label_tag :address, "Address"
       = text_field_tag :address
       = label_tag :state, "State"
-      = select_tag :state, options_for_select(["select from list"])
+      .button_for_select
+        = select_tag :state, options_for_select(["select from list","option 2"])
+        %span.select_arrow
+          %span select from list
       .dob
         = label_tag :dob, "DOB"
-        = select_tag :dob, options_for_select(["month"])
-        = select_tag :dob, options_for_select(["day"])
-        = select_tag :dob, options_for_select(["year"]),:class => "year"
+        .button_for_select
+          = select_tag :mob, options_for_select(["month","january"])
+          %span.select_arrow
+            %span month
+        .button_for_select
+          = select_tag :dob, options_for_select(["day","01"])
+          %span.select_arrow
+            %span day
+        .button_for_select
+          %span.select_arrow
+            %span year
+          = select_tag :yob, options_for_select(["year"]),:class => "year"
       .sex
         = label_tag :sex, "Sex", :class => "header_label"
         = label_tag :sex_male, "Male", :class => 'male'
@@ -45,4 +57,39 @@
         = radio_button_tag :sex, "female"
         .marital
           = label_tag :marital_status, "Marital Status"
-          = select_tag :marital_status, options_for_select(["Select from list"])
+          .button_for_select
+            = select_tag :marital_status, options_for_select(["Select from list"])
+            %span.select_arrow
+              %span Select from list
+    .right_column
+      %h4
+        Lorem Ipsum is simply dummy text of the printing an typesetting industry.
+        Lorem Ipsm has been the indu standard dummy text ever since the 1500s, 
+        when an  unknown printer took a galley of type and scrambled  to make a 
+        type specimen book. It has survived not on  five centuries, but also the leap
+        into electronic typeset remaining essentially unchanged. It was popularised 
+        the 1960s with the release of Letraset sheets containi Lorem Ipsum passage
+        and more recently with deskt publishing software like Aldus PageMaker incl
+        uding versions of Lorem
+      = label_tag :phone, "Mobile phone"
+      = text_field_tag :phone
+      = label_tag :city, "City"
+      = text_field_tag :city
+      = label_tag :zip_code, "Zip code",:class => 'zip_code'
+      = text_field_tag :zip_code, 'Format eg: 123-4567',:class => 'zip_code'
+      .dimensions
+        = label_tag :height, "Height"
+        = text_field_tag :height,nil
+      .dimensions
+        = label_tag :weight, "Weight"
+        = text_field_tag :weight,nil
+      .clear
+      = label_tag :occupation, "Occupation"
+      = text_field_tag :occupation
+    .line.clear
+    = link_to image_tag("submit_form_btn.png"),"/home/your_health_history_step2", :class => 'submit_form'
+    %h4.submit_context Save this form and move to your health history, you are one step way to have your history completed.  
+.fill_in_step1
+
+
+

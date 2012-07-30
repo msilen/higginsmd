@@ -13,13 +13,18 @@
 }
 .yhhform{
   margin: 68px 0 0 90px;
+  .line{
+    background: #333;
+    height:1px;
+    margin-right:95px;
+  }
   h4{
     color:black;
     text-align:left;
     display: block;
     margin-top:13px;
     font-size:10pt;
-    line-height:19px;
+    line-height:20px;
   }
   .left_column{
     width:293px;
@@ -48,8 +53,8 @@
       clear: both;
       display: block;
       margin-left: 163px;
-      margin-top: 47px;
-      margin-bottom:48px;
+      margin-top: 41px;
+      margin-bottom:56px;
       width: 93px;
     }
   }
@@ -60,13 +65,19 @@
     font-size:9pt;
   }
   textarea,input,select{
-    margin: 7px -1px 0 0;
+    margin: 1px -1px 0 0;
     width:100%;
     border:1px solid #cdcdcd;
     -moz-box-shadow:    inset 0px 1px 5px #f0f0f0;
     -webkit-box-shadow: inset 0px 1px 5px #f0f0f0;
+    color:#6FACA7;
     box-shadow:         inset 0px 1px 5px #f0f0f0;
     border-radius:5px;
+  }
+  textarea#how_did_you_find{
+    padding:9px;
+    width:273px;
+    height:74px;
   }
   .arrow{
     z-index:1000;
@@ -98,8 +109,12 @@
     width:342px;
     color: #6FACA7;
     margin-bottom: 22px;
+    height:37px !important;
     margin-top:0px;
     padding: 9px;
+  }
+  input{
+    color: #6FACA7;
   }
   label.header_label{
     display:block !important;
@@ -146,11 +161,92 @@
   }
   .dob{
     select{
-      width:104px;
+      width:100px;
       margin-right:3px;
     }
     select.year{
       width:116px;
     }
   }
+  label.zip_code{
+    margin:-3px 0 0 0;
+  }
+  input#zip_code{
+    margin-bottom:19px;
+  }
+  .right_column{
+    h4{
+      margin: 13px 14px 57px 21px;
+      height:160px;
+    }
+    float: left;
+    line-height: 15px;
+    margin: 13px 0 0 9px;
+    width: 341px;
+  }
+  .dimensions{
+    float:left;
+    margin-bottom: -2px;
+    input{
+      width:147px;
+    }
+    input#height{
+      margin-right:7px;
+    }
+  }
 }
+.clear{
+  clear:both;
+}
+.submit_form{
+  float:left;
+  cursor: pointer;
+  margin: 45px 0 0 601px;
+  background: transparent;
+  border:0;
+}
+h4.submit_context{
+  width:240px;
+  float: left;
+  margin: 52px 0 115px 11px;
+}
+.button_for_select{
+  position:relative;
+  overflow: hidden;
+  margin-right:8px;
+  float:left;
+  <%#border: 1px solid green;%>
+  option{
+    width:100%;
+  }
+  select{
+    opacity:0;
+    filter: alpha(opacity=0);
+    position: relative;
+    z-index:1;
+  }
+  span.select_arrow{
+    span{
+      padding-left:9px;
+    }
+    color: #6FACA7;
+    font-size:12px;
+    background: url('yhh_select_arrow.png') no-repeat right;
+    height:23px;
+    border:1px solid #cdcdcd;
+    padding: 10px 0 1px 0px;
+    border-radius: 5px;
+    width:100%;
+    left:0px;
+    top:0px;
+    position: absolute;
+  }
+}
+  .fill_in_step1{
+    background: url('fill_in_step1.png') no-repeat;
+    width:430px;
+    position:absolute;
+    height:119px;
+    left:93px;
+    top:-113px;
+  }
