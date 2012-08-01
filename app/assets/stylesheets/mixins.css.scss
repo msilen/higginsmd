@@ -1,0 +1,19 @@
+@mixin checkbox{
+  label{
+    display:block;
+    margin-top:15px;
+    background: url('checkbox_off.png') no-repeat;
+    padding-top: 5px;
+    padding-left: 26px;
+    width:140px;
+    height:17px;
+  }
+  label.checked{
+    background: url('checkbox_on.png') no-repeat;
+  }
+  input[type=checkbox]{
+    display:none;
+    filter: alpha(opacity=0);
+    opacity:0;
+  }
+}

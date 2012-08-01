@@ -24,13 +24,27 @@ $ ->
   $(".button_for_select select").click ->
     option_text=$(this).children("option:selected").val()
     $(this).next("span").children("span").html(option_text)
-  $("label.male").click ->
+  $("label.male",).click ->
     $("label.female").removeClass('checked')
     $(@).addClass('checked')
     radioid=$(@).attr('for')
     $("#"+radioid).attr('checked',true)
+  $(".treatment_modalities label,.checkbox label").click ->
+    id=$(this).attr('for')
+    $(this).toggleClass('checked')
+    $(this).prev('input#'+id).prop("checked",true)
   $("label.female").click ->
     $("label.male").removeClass('checked')
     $(@).addClass('checked')
     radioid=$(@).attr('for')
     $("#"+radioid).attr('checked',true)
+  #yes/no radio button handler
+  $("label.yes, label.no").click ->
+    associated_input=$("#"+$(this).prop('for'))
+    associated_input.prop("checked",true)
+    opposite_choice=$(this).siblings("label")
+    $(this).addClass("checked")
+    opposite_choice.removeClass("checked")
+    opposite_choice_input=$("#"+opposite_choice.prop('for'))
+    opposite_choice_input.prop("checked",false)
+    #TODO:debug later

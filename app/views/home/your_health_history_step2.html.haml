@@ -8,6 +8,15 @@
 .yhhform.step2
   %h1 Step2.Health History
   %h2 What is/are the main medical problem(s) for which you seek a medical marijuana evaluation?  
+  .right_side_description
+    %h4 
+      Lorem Ipsum is simply dummy text of the printing an typesetting industry.
+      Lorem Ipsm has been the indu standard dummy text ever since the 1500s, 
+      when an  unknown printer took a galley of type and scrambled  to make a 
+      type specimen book. It has survived not on  five centuries, but also the leap
+      into electronic typeset remaining essentially unchanged. It was popularised 
+      the 1960s with the release of Letraset sheets containi Lorem Ipsum passage
+      and more recently with deskt publishing 
   = form_tag do
     .medical_problem
       = label_tag :medical_problem, "Medical Problem"
@@ -16,3 +25,208 @@
       = label_tag :approximate_date, "Approximate Date"
       = text_field_tag :approximate_date, nil, :placeholder => "_ _ / _ _ / _ _ _ _"
     = button_tag "Add Problem"
+    %h2.treatment_modalities_h Which treatments modalities have you tried in treat your problems?
+    .treatment_modalities.clear
+      = label_tag :medications, "Medications"
+      = check_box_tag 'medications'
+      = label_tag :injections, 'Injections'
+      = check_box_tag 'injections'
+    .treatment_modalities
+      = label_tag :chiropractic_care, 'Chiropractic care'
+      = check_box_tag 'chiropractic_care'
+      = label_tag :herbs, 'Herbs'
+      = check_box_tag 'herbs'
+    .treatment_modalities
+      = label_tag :counseling, 'Counseling'
+      = check_box_tag 'counseling'
+      = label_tag :acupuncture, 'Acupuncture'
+      = check_box_tag 'acupuncture'
+    .treatment_modalities
+      = label_tag :surgery, 'Surgery'
+      = check_box_tag 'surgery'
+      = label_tag :physical_therapy, 'Physical therapy'
+      = check_box_tag 'physical_therapy'
+    .treatment_modalities
+      = label_tag :homeopathy, 'Homeopathy'
+      = check_box_tag 'homeopathy'
+      = label_tag :therapeutic, 'Therapeutic'
+      = check_box_tag 'therapeutic'
+    .treatment_modalities
+      = label_tag :osteopathic, 'Osteopathic Care'
+      = check_box_tag 'osteopathic'
+      = label_tag :others, 'Others'
+      = check_box_tag 'others'
+    .heading_radio
+      %h2 Have you ever been hospitalized?
+      = radio_button_tag :hospitalized , "yes"
+      = label_tag :hospitalized_yes, "Yes", :class => 'yes'
+      = radio_button_tag :hospitalized , "no"
+      = label_tag :hospitalized_no, "No", :class => 'no'
+      .prescription_opera_bug_fix
+        .prescription_reason.clear.text_field
+          = label_tag :prescription_reason, "Reason"
+          = text_field_tag :prescription_reason, nil
+        .reason_date.text_field.date
+          = label_tag :approximate_date, "Approximate Date"
+          = text_field_tag :approximate_date, nil, :placeholder => "_ _ / _ _ / _ _ _ _"
+        .text_field
+          = label_tag :hospital, "Hospital"
+          = text_field_tag :hospital, nil
+          = button_tag "Add Hospitalization"
+      .drug_herb.clear.nomargintop
+        %h2 Are you taking any prescription medication or herb? 
+        = radio_button_tag :ever_smoked , "yes"
+        = label_tag :ever_smoked_yes, "Yes", :class => 'yes'
+        = radio_button_tag :ever_smoked , "no"
+        = label_tag :ever_smoked_no, "No", :class => 'no'
+        %br.clear
+        .text_field
+          = label_tag :drug_herb, "Drug / Herb name"
+          = text_field_tag :drug_herb
+        .select_list.text_field
+          = label_tag :dosage, "Dosage"
+          .button_for_select
+            = select_tag :dosage, options_for_select(["select from list","option 2"])
+            %span.select_arrow
+              %span select from list
+        .text_field
+          = label_tag :prescript, "Prescript By"
+          = text_field_tag :prescript
+        .text_field
+          = label_tag :reason_for_taking, "Reason for taking"
+          = text_field_tag :reason_for_taking
+          = button_tag "Add Medication"
+      .allergies.nomargintop
+        %h2 Do you have any allergies do medication?
+        = radio_button_tag :allergies , "yes"
+        = label_tag :allergies_yes, "Yes", :class => 'yes'
+        = radio_button_tag :allergies , "no"
+        = label_tag :allergies_no, "No", :class => 'no'
+        %br.clear
+        .text_field
+          = label_tag :drug_medication_name, "Drug / Medication name"
+          = text_field_tag :drug_medication_name
+        .text_field.date
+          = label_tag :approximate_date, "Approximate Date"
+          = text_field_tag :approximate_date, nil, :placeholder => "_ _ / _ _ / _ _ _ _"
+        .text_field
+          = label_tag :type_of_reaction, "Type of reaction"
+          = text_field_tag :type_of_reaction
+          = button_tag "Add Allergy"
+      .tobacco.nomargintop
+        %h2 Do you smoke or have ever smoked tobacco?
+        .ever_smoked.clear.yes_no_double
+          %p.question.clear
+            Ever smoked?
+          = radio_button_tag :ever_smoked , "yes"
+          = label_tag :ever_smoked_yes, "Yes", :class => 'yes'
+          = radio_button_tag :ever_smoked , "no"
+          = label_tag :ever_smoked_no, "No", :class => 'no'
+        .current_smoking
+          %p.question.clear
+            Current smoking?
+          = radio_button_tag :current_smoking , "yes"
+          = label_tag :current_smoking_yes, "Yes", :class => 'yes'
+          = radio_button_tag :current_smoking , "no"
+          = label_tag :current_smoking_no, "No", :class => 'no'
+        .how_many.nomargintop
+          .select_list.text_field
+            = label_tag :packs_a_day, "How many packs a day?"
+            .button_for_select
+              = select_tag :packs_a_day, options_for_select(["select from list","option 2"])
+              %span.select_arrow
+                %span select from list
+      %br.clear
+      .alcohol.nomargintop
+        %h2 Do you drink or have ever drenched alcohol?
+        .ever_drenched.clear.yes_no_double
+          %p.question.clear
+            Ever drenched alcohol?
+          = radio_button_tag :ever_drenched , "yes"
+          = label_tag :ever_drenched_yes, "Yes", :class => 'yes'
+          = radio_button_tag :ever_drenched , "no"
+          = label_tag :ever_drenched_no, "No", :class => 'no'
+        .current_drinking
+          %p.question.clear
+            Current drinking?
+          = radio_button_tag :current_drinking , "yes"
+          = label_tag :current_drinking_yes, "Yes", :class => 'yes'
+          = radio_button_tag :current_drinking , "no"
+          = label_tag :current_drinking_no, "No", :class => 'no'
+        .how_many.nomargintop
+          .select_list.text_field
+            = label_tag :drinks_per_week, "How many drinks per week?"
+            .button_for_select
+              = select_tag :drinks_per_week, options_for_select(["select from list","option 2"])
+              %span.select_arrow
+                %span select from list
+      .cannabis.nomargintop
+        %h2 Do you use or have ever used cannabis for your medical condition?
+        .ever_used_cannabis.clear.yes_no_double
+          %p.question.clear
+            Ever used cannabis?
+          = radio_button_tag :ever_used_cannabis , "yes"
+          = label_tag :ever_used_cannabis_yes, "Yes", :class => 'yes'
+          = radio_button_tag :ever_used_cannabis , "no"
+          = label_tag :ever_used_cannabis_no, "No", :class => 'no'
+        .current_cannabis_use
+          %p.question.clear
+            Current cannabis use?
+          = radio_button_tag :current_cannabis_use , "yes"
+          = label_tag :current_cannabis_use_yes, "Yes", :class => 'yes'
+          = radio_button_tag :current_cannabis_use , "no"
+          = label_tag :current_cannabis_use_no, "No", :class => 'no'
+        .how_many.nomargintop
+          .select_list.text_field
+            = label_tag :how_many_per_week, "How many per week?"
+            .button_for_select
+              = select_tag :how_many_per_week, options_for_select(["select from list","option 2"])
+              %span.select_arrow
+                %span select from list
+        .text_field
+          = label_tag :cannabis_compare, "How cannabis compare with other medication that you take for your medical problem?",:class => "cannabis_compare"
+          = text_field_tag :cannabis_compare
+      .exposition
+        %h2 Have you ever been exposed to asbestos, chemicals, poisons, or radiation (besides x-rays)
+        %br.clear
+        .been_exposed
+          = radio_button_tag :exposition , "yes"
+          = label_tag :exposition_yes, "Yes", :class => 'yes'
+          = radio_button_tag :exposition , "no"
+          = label_tag :exposition_no, "No", :class => 'no'
+        .exposition_date.text_field
+          = label_tag :approximate_date_of_exposition, "Approximate date of exposition"
+          = text_field_tag :approximate_date_of_exposition, nil, :placeholder => "_ _ / _ _ / _ _ _ _"
+      .medical_problems.clear.nomargintop
+        %h2 Are there health/medical problems that occur frequently in your family?
+        = radio_button_tag :medical_problems , "yes"
+        = label_tag :medical_problems_yes, "Yes", :class => 'yes'
+        = radio_button_tag :medical_problems , "no"
+        = label_tag :medical_problems_no, "No", :class => 'no'
+        %br.clear
+          .text_field
+            = label_tag :family_member, "Family Member"
+            = text_field_tag :family_member
+          .select_list.text_field
+            = label_tag :illness, "Illness / Medical problem"
+            .button_for_select
+              = select_tag :illness, options_for_select(["select from list","option 2"])
+              %span.select_arrow
+                %span select from list
+          .select_list.text_field.family_member
+            = label_tag :approximate_age, "Approximate age"
+            .button_for_select
+              = select_tag :approximate_age, options_for_select(["0","99"])
+              %span.select_arrow
+                %span 0
+            = button_tag "Add Family Member",:id => "family_member_btn"
+    .line.clear
+    = link_to image_tag("submit_form_btn.png"),"/home/your_health_history_step3", :class => 'submit_form'
+    %h4.submit_context Save this form and your Higginsmd420 Health history will be completed
+    .fill_in_step2
+
+
+
+
+
+

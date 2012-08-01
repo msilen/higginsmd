@@ -1,4 +1,11 @@
+@import "mixins";
 .step2{
+  .family_member{
+    width:300px;
+  }
+  .medical_problems{
+    width:1025px;
+  }
   h1{
     margin-bottom:18px;
   }
@@ -10,8 +17,76 @@
     margin-top:16px;
     margin-right:8px;
     }
-    .medical_problem_date input{
+    .medical_problem_date input,.date input{
       width:148px;
+    }
+    .treatment_modalities{
+      width: 120px;
+      margin-top: 0px;
+      margin-right: 36px;
+      input{
+        float:none;
+        margin:0;
+        width:30px;
+        position:absolute;
+        height:0px;
+      }
+      @include checkbox;
+    }
+    .heading_radio{
+      h2{
+        float:left;
+      }
+      label{
+        display: inline-block;
+        position:relative;
+        top:-4px;
+        margin: 0 0 0 17px;
+        padding: 5px 0 2px;
+        width:39px;
+        background: url('radio_button_bg.png') no-repeat right top;
+        &.no{
+          margin: 0 0 0 3px;
+          width: 35px;
+        }
+        &.checked{
+          background-position: right -19px;
+        }
+      }
+      input[type=radio]{
+        display:none;
+      }
+      .text_field{
+        button{
+          margin:0;
+          width: 150px;
+        }
+        label{
+          background:none;
+          display:block;
+          margin:0;
+          width:137px;
+        }
+      }
+      .reason_date{
+        margin:16px 7px 0 0;
+      }
+    }
+    .prescription_opera_bug_fix{
+      margin-top:0;
+      clear:both;
+    }
+    .select_list{
+      div{
+        margin:0;
+      }
+      float:left;
+    }
+    .allergies .marginfix{
+      margin-top:28px;
+    }
+    .date label{
+      width:104px;
     }
     button{
       background: -moz-linear-gradient(top, #d8d7d7,#bfbdbd);
@@ -29,5 +104,104 @@
       -webkit-box-shadow: inset 2px -4px 3px #b8b3b0;
       box-shadow:         inset 2px -4px 3px #b8b3b0;
     }
+    .how_many{
+      margin-left:125px;
+    }
+    .tobacco ,.alcohol, .cannabis, .exposition{
+      label{
+        margin:0;
+      }
+      select{
+        width: 168px;
+      }
+    }
+    .cannabis{
+      label.cannabis_compare{
+        width:485px;
+      }
+      input#cannabis_compare{
+        width:440px;
+      }
+    }
+    .tobacco .yes_no_double{
+      margin-right:68px;
+    }
+    .alcohol .yes_no_double{
+      margin-right:22px;
+    }
+    .cannabis .yes_no_double{
+      margin-right:17px;
+    }
+    .exposition {
+      .text_field label{
+        background: none;
+      }
+      .been_exposed{
+        margin-top:44px;
+      }
+      .exposition_date{
+        label{
+          width:180px;
+        }
+        input{
+          width:150px;
+        }
+        margin-left:20px;
+      }
+    }
+
+  }
+  #drug_herb{
+    width: 191px;
+  }
+  #dosage{
+    width:138px;
+  }
+  #prescript{
+    width: 210px
+  }
+  #reason_for_taking{
+    width:246px;
+  }
+  #type_of_reaction{
+    width: 321px;
+  }
+  p.question{
+    color: #6FACA7;
+    font-family: MPCB;
+    padding:0 0 10px 0;
+  }
+  .nomargintop{
+    margin-top:0px !important;
+  }
+  h2.treatment_modalities_h{
+    margin-top:-6px;
+  }
+  select#approximate_age{
+    width:86px;
+    margin-right:5px;
+  }
+  #family_member_btn{
+    margin-left:7px;
+  }
+  .line{
+    width:1025px;
+  }
+  h4.submit_context{
+    width:200px;
+  }
+  .right_side_description{
+    position: absolute;
+    width:310px;
+    left:797px;
+    top: -20px;
+  }
+  .fill_in_step2{
+    position:absolute;
+    background: url('step2_header_arrow.png') no-repeat;
+    width:628px;
+    height:90px;
+    top: -130px;
+    left:94px;
   }
 }
